@@ -1,0 +1,174 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.show-assignments-container {
+    padding: 20px;
+}
+
+.assignment-details {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.assignment-details h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.assignment-details p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.assignment-details a {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.assignment-details a:hover {
+    text-decoration: underline;
+}
+
+.assignment-form {
+    padding: 20px;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.assignment-form input[type="text"],
+.assignment-form input[type="file"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.assignment-form input[type="file"] {
+    display: none;
+}
+
+.student-assignment-textarea {
+    width: calc(100%);
+    height: 150px;
+    padding-left: 15px;
+    padding-top: 10px;
+    font-size: 11pt;
+    -webkit-text-stroke-width: .1pt;
+    letter-spacing: .4pt;
+}
+
+.assignment-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.assignment-form button {
+    padding: 10px 80px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15dvh;
+    transition: background-color 0.3s ease;
+}
+
+.assignment-form button:hover {
+    background-color: #0056b3;
+}
+
+.student-assignment-label {
+    width: 150px;
+    padding: 10px 0px;
+    cursor: pointer;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: 10px 0;
+    background-color: rgb(74 232 229);
+    transition: .4s all ease;
+}
+
+.student-assignment-label:hover {
+    transform: scale(.96);
+}
+
+.assignment-form .studentlist-container {
+    background-color: #00beff;
+    padding: 15px 0;
+    padding-left: 15px;
+    margin: 15px;
+    border-radius: 10px;
+}
+.assignment-form .studentlist-container p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 5px 0;
+}
+
+.assignment-form .studentlist-container  button{
+    margin: 15px 0;
+    transition: .4s all ease;
+}
+
+.assignment-form .studentlist-container  button:hover{
+    transform: scale(.96);
+}
+
+.assignment-form .studentList-wrapper{
+    height: 75dvh;
+    overflow-y: auto;
+    
+}
+
+.assignment-form .studentList-wrapper::-webkit-scrollbar {
+    width: max-content;
+}
+
+.assignment-form .studentList-wrapper::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.assignment-form .studentList-wrapper::-webkit-scrollbar-thumb {
+    background-color: rgb(184, 186, 186);
+    border-radius: 2rem;
+    border: .4rem solid transparent;
+    background-clip: content-box;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .show-assignments-container {
+        padding: 10px;
+    }
+
+    .assignment-details h2 {
+        font-size: 16px;
+    }
+
+    .assignment-details p {
+        font-size: 14px;
+    }
+
+    .assignment-form input[type="text"],
+    .assignment-form input[type="file"] {
+        font-size: 14px;
+    }
+
+    .assignment-form button {
+        padding: 10px 80px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,12 @@
+.assignments-container {
+    margin: 20px 0;
+}
+
+.assignments-container select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}

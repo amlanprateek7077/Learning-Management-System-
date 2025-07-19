@@ -1,0 +1,539 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+}
+body{
+    height: auto;
+    width: 99vw;
+    background-color: #eee;
+}
+header{
+    height: 60px;
+    width: 100%;
+    background-color: #eee;
+}
+nav{
+    width: 100%;
+    height: 100%;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0,0.5);
+    position: sticky;
+   background-color: #eee;
+               
+}
+a{
+    text-decoration: none;
+    
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: auto;
+}
+.logo img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.logo h2{
+    font-size: 28px;
+}
+.logo span{
+    font-size: 28px;
+    margin-left: -10px;
+}
+.elements{
+    height: 100%;
+    width: 700px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.elements p a{
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+}
+
+.elements p a:hover{
+    color: rgb(86, 136, 12);
+}
+
+
+.elements button{
+    height: 35px;
+    width: auto;
+    padding: 0 15px;
+    border-radius: 20px;
+    border: 1px solid #e4dcdc;
+    background: #0066ff;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    
+}
+.elements button a{
+    color: #fff;
+}
+
+.elements button:hover{
+    background: #0000ff;
+
+}
+
+
+
+
+/* ....................................................hero-section................................................... */
+
+.hero-section{
+    height: 93vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-section .text-container{
+    height: auto;
+    width: 450px;
+    
+}
+.hero-section .text-container h1{
+
+    position: relative;   
+    margin-top: -60px;
+    font-size: 40px;
+}
+.hero-section .text-container h1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #eee;
+    animation: showRight 3s ease forwards;
+    animation-delay: 1s;
+}
+@keyframes showRight{
+    100%{
+        width: 0;
+    }
+}
+
+.hero-section .text-container h1 span{
+    color: rgb(1, 177, 1);
+}
+.hero-section .text-container p{
+    position: relative;
+    font-size: 15px;
+    word-spacing: 7px;
+    margin: 20px 0;
+}
+.hero-section .text-container p::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #eee;
+    animation: showRight 3s ease forwards;
+    animation-delay: 1.3s;
+}
+.hero-section .text-container button{
+    height: 40px;
+    padding: 15px;
+    background-color: #0066ff;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    gap: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 6px;
+    margin-top: 10px;
+    position: relative;
+}
+.hero-section .text-container button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #eee;
+    animation: showRight 3s ease forwards;
+    animation-delay: 1.6s;
+}
+.hero-section .text-container button:hover{
+    background: #0000ff;
+}
+.hero-section .image-container{
+    height: 500px;
+    width: 500px;
+    position: relative;
+    
+    margin: -50px 0 0 30px;
+}
+.hero-section .image-container .image1{
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+.hero-section .image-container .image2{
+    position: absolute;
+    bottom: 15px;
+    right: 70px;
+    z-index: 100;
+    height: 320px;
+    width: 220px;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.75);
+    animation: imageEffect 1s 1s linear 1 forwards;
+   
+}
+.hero-section .image-container .image3{
+    position: absolute;
+    top: 65px;
+    left: -8px;
+    height: 200px;
+    width: 200px;
+    z-index: 100;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.75);
+    animation: imageEffect 1s 1s linear 1 forwards;
+}
+
+@keyframes  imageEffect{
+    to{
+        transform: translateY(20px);
+    }
+}
+
+
+
+
+/* ....................................................categories-container................................................... */
+.categories-container{
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.categories-container p{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+.categories-container h1{
+    font-size: 36px;
+    margin-top: 30px;
+}
+.categories-container h1 span{
+    color: rgb(1, 177, 1);
+}
+.categories-container .heading{
+    letter-spacing: 4px;
+}
+.categories-container .card-container{
+    height: 500px;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.categories-container .card-box{
+    height: 300px;
+    width: 250px;
+    background: #cdc4c4;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    margin-top: 80px;
+    margin-left: 10px;
+    transition: 0.5s;
+}
+.categories-container .card-box:hover{
+    transform: translateY(-5px);
+    background-color: rgb(148, 225, 137);
+}
+.categories-container .card-box i{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    font-size: 30px;
+    padding-top: 15px;
+    padding-left: 10px;
+    background: #e9dede;
+   
+}
+.categories-container .card-box i.fa-pills,
+.categories-container .card-box i.fa-file-code{
+    padding-left: 20px;
+}
+.categories-container .card-box h3{
+    text-align: center;
+    margin: 10px 0 ;
+}
+
+
+/* ...................................................skill-section................................................... */
+
+.skill-section{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.skill-section .image{
+    height: 450px;
+    width: 550px;
+    position: relative;
+    margin-left: 100px;
+}
+.skill-section .image .image01{
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+.skill-section .image .image02{
+    position: absolute;
+    z-index: 100;
+    height: 300px;
+    width: 400px;
+    border-radius: 8px;
+    top: 90px;
+    left: 120px;
+}
+.skill-section .image .anim-card{
+    height: 60px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.8);
+    position: absolute;
+    left: 70px;
+    bottom: 30px;
+    background: #eee;
+    z-index: 999;
+    animation: cardAnim 1s  linear  infinite forwards ;
+}
+
+@keyframes cardAnim {
+    to{
+        transform: translateY(15px);
+    }
+}
+
+
+.skill-section .image .anim-card .i {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    color: #333;
+    font-size: 35px;
+
+}
+.skill-section .image p{
+    font-size: 14px;
+}
+.skill-section .image p span{
+    color: rgb(1, 177, 1);
+    font-size: 24px;
+    font-weight: 500;
+}
+.skill-section .text-box{
+    height: auto;
+    width: 450px;
+    padding: 20px 0;
+    margin-left: 100px;
+}
+.skill-section .text-box h1{
+    font-size: 35px;
+    word-spacing: 8px;
+}
+.skill-section .text-box h1 span{
+    color: rgb(189, 48, 48);
+}
+.skill-section .text-box p{
+    font-size: 14px;
+    margin-top: 30px;
+    line-height: 25px;
+    word-spacing: 5px;
+}
+.skill-section .text-box .tik-box{
+    margin-top: 25px;
+    font-size: 15px;
+    font-weight: 560;
+}
+.skill-section .text-box .icon{
+    color: rgb(110, 159, 12);
+    margin-right: 15px;
+
+}
+
+.elements p,
+header .elements .buttons button{
+    position: relative;
+    float: left;
+}
+
+#menu-bar{
+    display: none;
+}
+header label{
+    font-size: 20px;
+    color: #000;
+    cursor: pointer;
+    display: none;
+}
+
+
+/* ---------------responsive------------ */
+
+@media (max-width: 768px) {
+    header,nav{
+        padding: 20px;
+        height: 63px;
+        
+    }
+    header label{
+        display: initial;
+    }
+    header .elements{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #eee;
+        border-top: 1px solid rgba(0,0,0,.1);
+        display: none;
+    }
+    
+    header .elements p,
+    header .elements .buttons {
+        width: 100%;
+        background: #eee;
+    }
+    #menu-bar:checked ~.elements{
+        display: initial;
+    }
+    
+    .hero-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+        height: 98vh;
+    }
+    .hero-section .text-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero-section .text-container p,
+    .hero-section .text-container h1{
+        max-width: 200px;
+    }
+    .hero-section .image-container{
+        margin-top: 50px;
+        width: 300px;
+        height: 250px;
+        position: relative;
+    }
+    .hero-section .image-container .image1{
+        height: 250px;
+        width: 300px;
+    }
+    .hero-section .image-container .image2{
+        position: absolute;
+        bottom: 5px;
+        right: 25px;
+        height: 170px;
+        width: 140px;
+    }
+    .hero-section .image-container .image3{
+        height: 100px;
+        width: 120px;
+        position: absolute;
+        top: 15px;
+        left: 0px;
+    }
+    .categories-container h1{
+        text-align: center;
+    }
+    .categories-container .card-container{
+        display: grid;
+        grid-template-columns: auto;
+        gap: 10px;
+        height: 1640px;
+        flex-wrap: wrap;
+    }
+    .skill-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 120vh;
+        position: relative;
+        margin-top: 20px;
+    }
+    .skill-section .image .image02{
+        width: 220px;
+        height: 190px;
+        position: absolute;
+        left: 90px;
+        top: 20px;
+    }
+    .skill-section .image .image01{
+        width: 350px;
+        height: 250px;
+    }
+    .skill-section .image .anim-card{
+        
+        position: absolute;
+        bottom: 80px;
+       
+    }
+    .text-box{
+        position: relative;
+        left: 70px;
+    }
+    .text-box p,
+    .text-box h1{
+        max-width: 250px;
+        text-align: center;
+    }
+    
+    /* NavBar.css */
+    .blur {
+        filter: blur(5px);
+        transition: filter 0.3s ease-in-out;
+}
+
+
+}

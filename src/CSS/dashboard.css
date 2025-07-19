@@ -1,0 +1,106 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #eee;
+}
+
+.dashboard-container .dashboard-sidebar .active-button {
+    background-color: #0056b3
+}
+
+.dashboard-sidebar {
+    width: 250px;
+    background-color: #fff;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dashboard-sidebar p {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 11pt;
+    -webkit-text-stroke-width: .1pt;
+    padding: 5px 10px;
+    background: rgb(63, 248, 229);
+    border-radius: 10px;
+}
+
+.dashboard-sidebar p span {
+    font-size: 11pt;
+    font-family: monospace;
+}
+
+.dashboard-sidebar button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.dashboard-sidebar button:hover {
+    background-color: #0056b3;
+}
+
+.dashboard-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .dashboard-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        display: none;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1000;
+        background-color: #fff;
+        overflow-y: auto;
+    }
+
+    .sidebar-active .dashboard-sidebar {
+        display: flex;
+        /* Show sidebar when active */
+    }
+
+    .dashboard-content {
+        padding: 10px;
+    }
+
+    .hamburger-menu {
+        display: block;
+        z-index: 1100;
+        margin-top: 20px;
+        margin-left: 15px;
+        width: calc(100% - 18px);
+    }
+
+    .hamburger-menu button {
+        font-size: 17pt;
+        border: none;
+    }
+}

@@ -1,0 +1,110 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.branch-messages-container {
+    padding: 20px;
+    height: 80dvh;
+    overflow-y: auto;
+}
+
+.branch-messages-container::-webkit-scrollbar {
+    width: max-content;
+}
+
+.branch-messages-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.branch-messages-container::-webkit-scrollbar-thumb {
+    background-color: rgb(184, 186, 186);
+    border-radius: 2rem;
+    border: .4rem solid transparent;
+    background-clip: content-box;
+}
+
+.message-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+.teacher-message {
+    background-color: #e0f7fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.message-author {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.message-content {
+    margin-bottom: 5px;
+    font-family: monospace;
+}
+
+.message-datetime {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.message-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.message-input {
+    flex-grow: 1;
+    padding-top: 10px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.message-button {
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.message-button:hover {
+    background-color: #0056b3;
+}
+
+.no-messages {
+    text-align: center;
+    font-size: 1.2em;
+    color: #777;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .branch-messages-container {
+        padding: 10px;
+    }
+
+    .message-input {
+        font-size: 14px;
+    }
+
+    .message-button {
+        font-size: 14px;
+    }
+}

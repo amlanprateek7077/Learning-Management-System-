@@ -1,0 +1,108 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.announcement-container {
+    padding: 20px;
+}
+
+.announcement-list {
+    margin-bottom: 20px;
+    height: 80dvh;
+    overflow-y: auto;
+}
+
+.announcement-list::-webkit-scrollbar {
+    width: max-content;
+}
+
+.announcement-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.announcement-list::-webkit-scrollbar-thumb {
+    background-color: rgb(184, 186, 186);
+    border-radius: 2rem;
+    border: .4rem solid transparent;
+    background-clip: content-box;
+}
+
+.announcement-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+.teacher-announcement {
+    background-color: #e0f7fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.announcement-author {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.announcement-message {
+    margin-bottom: 5px;
+    font-family: monospace;
+}
+
+.announcement-datetime {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.announcement-form {
+    display: flex;
+    gap: 10px;
+}
+
+.announcement-input {
+    flex-grow: 1;
+    padding-top: 10px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.announcement-button {
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 12pt;
+    transition: background-color 0.3s ease;
+}
+
+.announcement-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .announcement-container {
+        padding: 10px;
+    }
+
+    .announcement-input {
+        font-size: 14px;
+    }
+
+    .announcement-button {
+        font-size: 14px;
+    }
+}
